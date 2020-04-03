@@ -56,7 +56,7 @@ pip install velodyn
 We have provided a `velodyn` tutorial using the Colab computing environment from Google.
 This notebook allows for execution of a `velodyn` workflow, end-to-end, all within your web browser.
 
-[velodyn tutorial](https://drive.google.com/file/d/1k2sKXkwf0B8a4YeA1We7gZLRLsUKqqbq/view?usp=sharing)
+[velodyn tutorial](https://colab.research.google.com/drive/1JMjw_nJYHmOAEn7ZHL8q2MQbyxmphbni)
 
 ## Gene expression state stability measurements
 
