@@ -459,6 +459,7 @@ class VelocityCI(object):
     def _fit_velocity(
         self,
         SUA_hat: np.ndarray,
+        velocity_mode: str='deterministic',
     ) -> np.ndarray:
         """Fit a deterministic RNA velocity model to the 
         bootstrapped count matrices.
@@ -469,6 +470,9 @@ class VelocityCI(object):
             [Cells, Genes, (Spliced, Unspliced, Ambiguous)] 
             randomly sampled array of read counts assigned
             to a splicing status.
+        velocity_mode : str
+            mode argument for `scvelo.tl.velocity`.
+            one of ("deterministic", "stochastic", "dynamical").
 
         Returns
         -------
@@ -524,7 +528,7 @@ class VelocityCI(object):
         # RNA velocity publication
         scv.pp.pca(boot, use_highly_variable=False)
         scv.pp.moments(boot, n_pcs=30, n_neighbors=100)
-        scv.tl.velocity(boot, mode='deterministic')
+        scv.tl.velocity(boot, mode=velocity_mode)
 
         return boot.layers['velocity']
 

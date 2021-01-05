@@ -74,7 +74,7 @@ def compute_velocity_on_grid(
 
     # Generates a linearly spaced grid from the minimum to maximum
     # embedding coordinate along each dimension
-    # the number of grid locations is specific with `n_grid_points`
+    # the number of grid locations is specified with `n_grid_points`
     grs = []
     for dim_i in range(n_dim):
         if grid_min_max is None:
@@ -178,6 +178,7 @@ def compute_div(
     adata: anndata.AnnData,
     use_rep: str = 'pca',
     n_grid_points: int = 30,
+    return_grid: bool=False,
     **kwargs,
 ) -> np.ndarray:
     """
@@ -201,6 +202,12 @@ def compute_div(
     -------
     D : np.ndarray
         [n_grid_points, n_grid_points] divergence values.
+    X_grid : np.ndarray, optional
+        [n_grid_points, EmbedDims] grid locations in the embedding.
+        returned if `return_grid=True`.
+    V_grid : np.ndarray, optional
+        [n_grid_points, EmbedDims] velocity values at grid locations.
+        returned if `return_grid=True`.
 
     See Also
     --------
@@ -224,6 +231,9 @@ def compute_div(
     # compute the divergence
     D_spatial = divergence([V_spatial[:, :, i]
                             for i in range(V_spatial.shape[2])])
+    if return_grid:
+        return D_spatial, X_grid, V_grid
+    
     return D_spatial
 
 
