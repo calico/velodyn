@@ -8,25 +8,33 @@ Qualitative analysis of RNA velocity has been used to establish the order of gen
 The tools provided by `velodyn` along with their associated usage are described below.
 All `velodyn` tools are designed to integrate with the `scanpy` ecosystem and `anndata` structures.
 
-We have released `velodyn` in association with a recent pre-print.
-Please cite our pre-print if you find `velodyn` useful for your work.
+We have released `velodyn` in association with a recent paper.
+Please cite our paper if you find `velodyn` useful for your work.
 
 
-[**Differentiation reveals the plasticity of age-related change in murine muscle progenitors**](https://www.biorxiv.org/content/10.1101/2020.03.05.979112v1)  
-Jacob C Kimmel, David G Hendrickson, David R Kelley  
-bioRxiv 2020.03.05.979112; doi: https://doi.org/10.1101/2020.03.05.979112
+[**Differentiation reveals latent features of aging and an energy barrier in murine myogenesis**](https://pubmed.ncbi.nlm.nih.gov/33910007/)  
+Jacob C Kimmel, Nelda Yi, Margaret Roy, David G Hendrickson, David R Kelley  
+*Cell Reports* 2021, 35 (4); doi: https://doi.org/10.1016/j.celrep.2021.109046
+
+**BibTeX**
 
 ```
-@article {Kimmel2020_myodiff,
-	author = {Kimmel, Jacob C and Hendrickson, David G and Kelley, David R},
-	title = {Differentiation reveals the plasticity of age-related change in murine muscle progenitors},
-	elocation-id = {2020.03.05.979112},
-	year = {2020},
-	doi = {10.1101/2020.03.05.979112},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2020/03/06/2020.03.05.979112},
-	eprint = {https://www.biorxiv.org/content/early/2020/03/06/2020.03.05.979112.full.pdf},
-	journal = {bioRxiv}
+@article{kimmel_latent_2021,
+	title = {Differentiation reveals latent features of aging and an energy barrier in murine myogenesis},
+	volume = {35},
+	issn = {2211-1247},
+	url = {https://www.cell.com/cell-reports/abstract/S2211-1247(21)00362-4},
+	doi = {10.1016/j.celrep.2021.109046},
+	language = {English},
+	number = {4},
+	urldate = {2021-05-19},
+	journal = {Cell Reports},
+	author = {Kimmel, Jacob C. and Yi, Nelda and Roy, Margaret and Hendrickson, David G. and Kelley, David R.},
+	month = apr,
+	year = {2021},
+	pmid = {33910007},
+	note = {Publisher: Elsevier},
+	keywords = {aging, dynamical systems, fibro/adipogenic progenitor, muscle stem cell, myogenesis, RNA-seq, single cell, stem cell}
 }
 ```
 
